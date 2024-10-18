@@ -259,7 +259,7 @@ export default function HomeComponent() {
   };
 
   return (
-    <div style={{ position: "absolute", top: "0%" }}>
+    <div style={{ position: "absolute", top: "0%" , overflowX: "hidden"}}>
       <div
         style={{ background: "#f9f9f9", minHeight: "100vh", padding: "20px" }}
       >
@@ -428,59 +428,65 @@ export default function HomeComponent() {
               <h3>Report Book</h3>
               <p>Reason for Reporting "{selectedBook?.name}"</p>
 
-              <div style={{ marginBottom: "10px" }}>
+              <div style={{ marginBottom: "10px", display: "flex", justifyContent: "space-around" }}>
+              <label>Contains religious incitement</label>
                 <input
                   type="checkbox"
                   name="religious"
                   checked={reportReasons.religious}
                   onChange={handleReportReasonChange}
+                  style={{width: "50px"}}
                 />
-                <label>Contains religious incitement</label>
               </div>
-              <div style={{ marginBottom: "10px" }}>
+              <div style={{ marginBottom: "10px", display: "flex", justifyContent: "space-around" }}>
+              <label>Contains political incitement</label>
                 <input
                   type="checkbox"
                   name="political"
                   checked={reportReasons.political}
                   onChange={handleReportReasonChange}
+                  style={{width: "50px"}}
                 />
-                <label>Contains political incitement</label>
               </div>
-              <div style={{ marginBottom: "10px" }}>
+              <div style={{ marginBottom: "10px", display: "flex", justifyContent: "space-around" }}>
+              <label>Contains violence</label>
                 <input
                   type="checkbox"
                   name="violence"
                   checked={reportReasons.violence}
                   onChange={handleReportReasonChange}
+                  style={{width: "50px"}}
                 />
-                <label>Contains violence</label>
               </div>
-              <div style={{ marginBottom: "10px" }}>
+              <div style={{ marginBottom: "10px", display: "flex", justifyContent: "space-around" }}>
+              <label>Contains foul language</label>
                 <input
                   type="checkbox"
                   name="foulLanguage"
                   checked={reportReasons.foulLanguage}
                   onChange={handleReportReasonChange}
+                  style={{width: "50px"}}
                 />
-                <label>Contains foul language</label>
               </div>
-              <div style={{ marginBottom: "10px" }}>
+              <div style={{ marginBottom: "10px", display: "flex", justifyContent: "space-around" }}>
+              <label>Contains insulting words</label>
                 <input
                   type="checkbox"
                   name="insulting"
                   checked={reportReasons.insulting}
                   onChange={handleReportReasonChange}
+                  style={{width: "50px"}}
                 />
-                <label>Contains insulting words</label>
               </div>
-              <div style={{ marginBottom: "10px" }}>
+              <div style={{ marginBottom: "10px", display: "flex", justifyContent: "space-around" }}>
+              <label>Contains pornographic words</label>
                 <input
                   type="checkbox"
                   name="pornographic"
                   checked={reportReasons.pornographic}
                   onChange={handleReportReasonChange}
+                  style={{width: "50px"}}
                 />
-                <label>Contains pornographic words</label>
               </div>
 
               <div style={{ display: "flex", justifyContent: "space-between" }}>
@@ -490,6 +496,7 @@ export default function HomeComponent() {
             </div>
           </div>
         )}
+        
 
         {reportSubmitted && (
           <div

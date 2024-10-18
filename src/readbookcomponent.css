@@ -1,0 +1,81 @@
+/* ReadBookComponent.css */
+.container {
+    background-color: #f0f4f8;
+    text-align: center;
+    min-height: 100vh;
+  }
+  
+  .content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 600px; /* Adjust this with media queries */
+    margin: 0 auto;
+    width: 100%; /* Make sure the content takes full width on smaller screens */
+  }
+  
+  .bookText {
+    margin: 20px 0;
+    line-height: 1.6;
+  }
+  
+  .slider {
+    width: 100%;
+    padding: 10px 0;
+    margin-top: 10px;
+  }
+  
+  .speedControl {
+    margin: 20px 0;
+    text-align: left;
+  }
+  
+  .button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: auto; /* Default to auto */
+  }
+  
+  /* Media queries for responsiveness */
+  @media (min-width: 200px) and (max-width: 720px) {
+    .content {
+      max-width: 100%; /* Adjust to full width */
+      padding: 15px;  /* Decrease padding for small screens */
+    }
+  
+    img {
+      width: 150px; /* Reduce image size */
+      height: auto;
+    }
+  
+    .slider {
+      width: 100%; /* Ensure the slider is fully responsive */
+    }
+  
+    .button {
+      width: 100%; /* Make buttons full width */
+      margin: 5px 0; /* Adjust button margin */
+    }
+  }
+  
+  @media (max-width: 375px) {
+    .content {
+      padding: 10px; /* Further reduce padding for very small screens */
+    }
+  
+    img {
+      width: 100px; /* Further reduce image size */
+    }
+  
+    .bookText {
+      font-size: 14px; /* Adjust font size for better readability */
+    }
+  }
+  

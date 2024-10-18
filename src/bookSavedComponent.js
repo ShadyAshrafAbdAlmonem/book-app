@@ -35,6 +35,7 @@ export default function BookSavedComponent() {
                     border: "none",
                     borderRadius: "5px",
                     cursor: "pointer",
+                    width: "50px"
                   }}
                   onClick={() => handleBookRead(book)}
                 >

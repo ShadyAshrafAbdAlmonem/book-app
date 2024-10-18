@@ -108,3 +108,53 @@ p {
   margin-top: 20px;
   font-size: 14px;
 }
+
+@media (max-width: 720px) {
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(270deg, #ff9a9e, #fad0c4, #fad0c4);
+    background-size: 600% 600%;
+    animation: backgroundAnimation 8s ease infinite;
+  }
+
+  .form-container {
+    background-color: white;
+    padding: 1.5rem; /* Reduce padding on smaller screens */
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 75%; /* Adjust to take up more space on small screens */
+    text-align: center;
+  }
+
+  label {
+    font-size: 14px; /* Reduce font size for smaller screens */
+  }
+
+  input {
+    padding: 6px; /* Reduce padding for input fields */
+  }
+
+  button {
+    width: 100%; /* Make buttons full width */
+    padding: 8px; /* Reduce padding */
+    margin-top: 15px; /* Add some spacing */
+  }
+
+  .input-container {
+    margin-bottom: 1rem; /* Reduce margin on small screens */
+  }
+
+  .toggle-password {
+    right: 8px; /* Adjust spacing for smaller input fields */
+  }
+
+  p {
+    font-size: 12px; /* Reduce paragraph text size */
+    margin-top: 10px;
+  }
+}

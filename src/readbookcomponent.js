@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
+import './readbookcomponent.css';
 
 export default function ReadBookComponent() {
   const location = useLocation();
@@ -77,15 +78,15 @@ export default function ReadBookComponent() {
 
   return (
     
-    <div style={styles.container}>
-      <div style={styles.content}>
+    <div className="container">
+      <div className="content">
         <h1>{book.name}</h1>
         <img
           src={book.img}
           alt={book.name}
           style={{ width: "200px", height: "300px" }}
         />
-        <p style={styles.bookText}>
+        <p className="bookText">
           {bookWords.map((word, index) => (
             <span
               key={index}
@@ -101,7 +102,7 @@ export default function ReadBookComponent() {
             </span>
           ))}
         </p>
-          <div style={styles.speedControl}>
+          <div className="speedControl">
 
         <label htmlFor="rate">Reading Speed: {speechRate}x</label>
         <input
@@ -112,79 +113,35 @@ export default function ReadBookComponent() {
           step="0.1"
           value={speechRate}
           onChange={handleRateChange}
-          style={styles.slider}
+          className="slider"
         />
 
           </div>
 
-        <button onClick={() => handleReadAloud(0)} style={styles.button}>📢 Start Reading Aloud</button>
+          <div>
+          <button onClick={() => handleReadAloud(0)} className="button">📢 Start Reading Aloud</button>
 
-        <button onClick={handleToggleMusic} style={styles.button}>
-          {isPlaying ? "⏸️ Pause Music" : "▶️ Play Calm Music"}
-        </button>
+<button onClick={handleToggleMusic} className="button">
+  {isPlaying ? "⏸️ Pause Music" : "▶️ Play Calm Music"}
+</button>
 
-        <audio ref={audioRef} loop>
-          <source
-            src="https://www.youtube.com/watch?v=10rqqwZdmGg"
-            type="audio/mpeg"
-          />
-          Your browser does not support the audio element.
-        </audio>
+<audio ref={audioRef} loop>
+  <source
+    src="https://www.youtube.com/watch?v=10rqqwZdmGg"
+    type="audio/mpeg"
+  />
+  Your browser does not support the audio element.
+</audio>
+
+<Link to="/home">
+<button className="button">Go back to Home</button>
+</Link>
+          </div>
       </div>
 
-      <Link to="/home">
-        <button style={styles.button}>Go back to Home</button>
-      </Link>
+
     </div>
   );
 }
 
-const styles = {
-  container: {
-    padding: "20px",
-    backgroundColor: "#f0f4f8",
-    textAlign: "center",
-    minHeight: "100vh",
-  },
-  content: {
-    backgroundColor: "#fff",
-    padding: "20px",
-    borderRadius: "8px",
-    boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)",
-    maxWidth: "600px",
-    margin: "0 auto",
-  },
-  bookText: {
-    margin: "20px 0",
-    lineHeight: "1.6",
-  },
-  word: {
-    cursor: "pointer",
-    marginRight: "5px",
-    padding: "2px 4px",
-    borderRadius: "4px",
-    transition: "background-color 0.3s",
-  },
-  slider: {
-    width: "100%",
-    padding: "10px 0",
-    marginTop: "10px",
-  },
-  speedControl: {
-    margin: "20px 0",
-    textAlign: "left",
-  },
-  button: {
-    backgroundColor: "#007bff",
-    color: "#fff",
-    border: "none",
-    padding: "10px 20px",
-    margin: "10px",
-    borderRadius: "5px",
-    cursor: "pointer",
-    transition: "background-color 0.3s",
-  },
-  buttonHover: {
-    backgroundColor: "#0056b3",
-  },
-};
+
