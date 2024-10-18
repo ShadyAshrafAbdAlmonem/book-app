@@ -1,0 +1,95 @@
+.buy-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f6f8;
+  }
+  
+  .buy-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  .book-title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .book-price {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+  }
+  
+  .payment-methods h3 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .payment-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .payment-btn {
+    background-color: #007bff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+  }
+  
+  .payment-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+  }
+  
+  .payment-btn:active {
+    transform: translateY(1px);
+  }
+  
+  .payment-btn.visa {
+    background-color: #1a73e8;
+  }
+  
+  .payment-btn.visa:hover {
+    background-color: #0f5dbd;
+  }
+  
+  .payment-btn.mastercard {
+    background-color: #ff5f00;
+  }
+  
+  .payment-btn.mastercard:hover {
+    background-color: #e64a00;
+  }
+  
+  .payment-btn.vodafone {
+    background-color: #ff004d;
+  }
+  
+  .payment-btn.vodafone:hover {
+    background-color: #e60042;
+  }
+  
+  @media (max-width: 768px) {
+    .buy-card {
+      width: 90%;
+      padding: 20px;
+    }
+  }
+  

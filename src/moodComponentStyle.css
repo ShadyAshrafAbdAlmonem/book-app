@@ -1,0 +1,16 @@
+body {
+    background-color: #ffffff;
+    color: #000000;
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+  
+  .dark-mode {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+  
+  p {
+    transition: color 0.5s ease;
+  }
+  

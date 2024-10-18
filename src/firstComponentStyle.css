@@ -1,0 +1,110 @@
+form {
+    max-width: 400px;
+    margin: auto;
+  }
+  
+  div {
+    width: 100%;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+
+  .input-container {
+    position: relative;
+  }
+  
+  .input-container input {
+    width: 100%;
+    padding-right: 30px; 
+  }
+  
+  .toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(270deg, #ff9a9e, #fad0c4, #fad0c4);
+  background-size: 600% 600%;
+  animation: backgroundAnimation 8s ease infinite;
+}
+
+@keyframes backgroundAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.form-container {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  max-width: 100%;
+  text-align: center;
+  margin: auto;
+}
+
+.input-container {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+p {
+  margin-top: 20px;
+  font-size: 14px;
+}
